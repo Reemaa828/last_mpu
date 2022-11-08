@@ -63,9 +63,9 @@ void mpu_get_gyro_raw(mpu_data_t *mpu_data){
 }
 void mpu_get_gyro(mpu_data_t *mpu_data){
    mpu_get_gyro_raw(mpu_data);
-	mpu_data->x = mpu_data->x * 9.81;
-	mpu_data->y = mpu_data->y * 9.81;
-	mpu_data->z = mpu_data->z * 9.81;
+	mpu_data->x = mpu_data->x ;
+	mpu_data->y = mpu_data->y ;
+	mpu_data->z = mpu_data->z ;
 }
 
 void mpu_get_accel(mpu_data_t* mpu_data)

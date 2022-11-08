@@ -26,15 +26,23 @@ int main(void) {
     mpu_init();
     // lcd_print("el i2c 3ady");
     mpu_data_t accel;
-
+    mpu_data_t gyro;
     while (1) {
         mpu_get_accel(&accel);
-        lcd_set_cursor(0,0);
-        lcd_printf("X: %d\n", (u32)accel.x);
+        mpu_get_gyro(&gyro);
+       /* lcd_set_cursor(0,0);
+        lcd_printf("AX: %d\n", (u32)accel.x);
         lcd_set_cursor(0,1);
-         lcd_printf("Y: %d\n", (u32)accel.y);
+         lcd_printf("AY: %d\n", (u32)accel.y);
          lcd_set_cursor(8,1);
-         lcd_printf("Z: %d\n", (u32)accel.z);
+         lcd_printf("AZ: %d\n", (u32)accel.z); */
+        lcd_set_cursor(0,0); 
+        lcd_printf("GX: %d\n", (u32)gyro.x);
+        lcd_set_cursor(0,1);
+         lcd_printf("GY: %d\n", (u32)gyro.y);
+         lcd_set_cursor(8,1);
+         lcd_printf("GZ: %d\n", (u32)gyro.z);
+
 
         _delay_ms(200);
     }

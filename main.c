@@ -32,8 +32,9 @@ int main(void) {
         lcd_set_cursor(0,0);
         lcd_printf("X: %d\n", (u32)accel.x);
         lcd_set_cursor(0,1);
-        lcd_printf("Y: %d\n", (u32)accel.y);
-        // lcd_printf("Z: %lu\n", (uint16_t)accel.z);
+         lcd_printf("Y: %d\n", (u32)accel.y);
+         lcd_set_cursor(8,1);
+         lcd_printf("Z: %d\n", (u32)accel.z);
 
         _delay_ms(200);
     }

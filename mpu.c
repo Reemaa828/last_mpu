@@ -16,8 +16,6 @@ void ERROR_CHECK(ret_code_t error_code)
 	}
 }
 
-
-
 void mpu_init(void)
 {    ret_code_t error_code;
 	// puts("Write 0 to PWR_MGMT_1 reg to wakeup MPU.");
@@ -26,7 +24,6 @@ void mpu_init(void)
 	ERROR_CHECK(error_code);
 
 }
-
 
 void mpu_get_accel_raw(mpu_data_t* mpu_data)
 {
@@ -45,6 +42,7 @@ void mpu_get_accel_raw(mpu_data_t* mpu_data)
 	mpu_data->y = (s16)(data[2] << 8 | data[3]) / 16384.0;
 	mpu_data->z = (s16)(data[4] << 8 | data[5]) / 16384.0;
 }
+
 void mpu_get_gyro_raw(mpu_data_t *mpu_data){
  ret_code_t error_code;
 	/* 2 registers for each of accel x, y and z data */
@@ -61,6 +59,7 @@ void mpu_get_gyro_raw(mpu_data_t *mpu_data){
 	mpu_data->y = (s16)(data[2] << 8 | data[3]) / 16.4;
 	mpu_data->z = (s16)(data[4] << 8 | data[5]) / 16.4;
 }
+
 void mpu_get_gyro(mpu_data_t *mpu_data){
    mpu_get_gyro_raw(mpu_data);
 	mpu_data->x = mpu_data->x ;

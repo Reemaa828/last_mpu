@@ -3,12 +3,9 @@
 #include "avr/io.h"
 #include <avr/delay.h>
 #include "DIO.h"
+#ifndef F_CPU
 #define F_CPU 8000000UL
-
-
-
-
-
+#endif
 
 u8 DIO_SetPinDirection(u8 PORT_Num, u8 PIN_Num, u8 PIN_Direction)
 {

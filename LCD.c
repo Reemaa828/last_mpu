@@ -1,6 +1,8 @@
 
 #include "LCD.h"
-#define  F_CPU 8000000UL 
+#ifndef F_CPU
+#define  F_CPU 8000000UL
+#endif
 #include <util/delay.h>
 #include <stdio.h>
 #include "STD_Types.h"

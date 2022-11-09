@@ -1,7 +1,7 @@
 #ifndef _LCD_PRIVATE_H
 #define _LCD_PRIVATE_H
 
-#include "lcd_config.h"
+#include "LCD_config.h"
 
 #define INIT_DELAY 500
 #define LCD_DELAY 40
